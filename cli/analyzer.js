@@ -279,12 +279,18 @@ export function formatStack(info) {
   const parts = [];
 
   if (info.detectedFrameworks.length > 0) {
-    // Prioritize: avoid duplicates like "React" when "Next.js" is present
-    const primary = info.detectedFrameworks.filter(f => {
-      if (f === 'React' && info.detectedFrameworks.some(x => ['Next.js', 'Remix', 'Gatsby'].includes(x))) return false;
+    // Deduplicate and prioritize:
+    // - Drop bare "React" when Next.js / Remix / Gatsby already implies it
+    // - Drop bare "Astro" when a more specific "Astro + X" label is present
+    const frameworks = info.detectedFrameworks;
+    const hasAstroIntegration = frameworks.some(f => f.startsWith('Astro +'));
+    const primary = frameworks.filter(f => {
+      if (f === 'React' && frameworks.some(x => ['Next.js', 'Remix', 'Gatsby', 'Astro + React'].includes(x))) return false;
+      if (f === 'Astro' && hasAstroIntegration) return false;
       return true;
     });
-    parts.push(...primary.slice(0, 3));
+    // Deduplicate with a Set (preserves insertion order)
+    parts.push(...[...new Set(primary)].slice(0, 3));
   }
 
   if (info.language === 'TypeScript') parts.push('TypeScript');
