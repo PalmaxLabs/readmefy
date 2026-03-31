@@ -1,0 +1,75 @@
+/* Panchang */
+@font-face {
+  font-family: 'Panchang';
+  src: url('//cdn.fontshare.com/wf/X5FGVCMAJXY2PPAKFNB6B3277IKUYEAQ/RAM3WRH4CVFSYAFWP2YSS6MO7FRKC6M2/PLXLBN6QWSG3EYOIMSKMV7XACE6MR6FE.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/X5FGVCMAJXY2PPAKFNB6B3277IKUYEAQ/RAM3WRH4CVFSYAFWP2YSS6MO7FRKC6M2/PLXLBN6QWSG3EYOIMSKMV7XACE6MR6FE.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/X5FGVCMAJXY2PPAKFNB6B3277IKUYEAQ/RAM3WRH4CVFSYAFWP2YSS6MO7FRKC6M2/PLXLBN6QWSG3EYOIMSKMV7XACE6MR6FE.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('//cdn.fontshare.com/wf/5BUG5G36NPBUKEYGUFVAMNGOQ6LLGZQH/VTTOFTNKEBTNZOERJH34DSSK7RZTN2AS/G7T7CRF655U6PP5HYTBJLBWGOEIDXACC.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/5BUG5G36NPBUKEYGUFVAMNGOQ6LLGZQH/VTTOFTNKEBTNZOERJH34DSSK7RZTN2AS/G7T7CRF655U6PP5HYTBJLBWGOEIDXACC.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/5BUG5G36NPBUKEYGUFVAMNGOQ6LLGZQH/VTTOFTNKEBTNZOERJH34DSSK7RZTN2AS/G7T7CRF655U6PP5HYTBJLBWGOEIDXACC.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('//cdn.fontshare.com/wf/3EYR5VZG7BOTQNLB34TX4FUZFGX2YCCM/SFOY6ZPN4VTCDQSAJXRUH6WO332MUVIJ/K6CYW4ZSO2LJE4GQSX5LXSHNP2RCBS3K.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/3EYR5VZG7BOTQNLB34TX4FUZFGX2YCCM/SFOY6ZPN4VTCDQSAJXRUH6WO332MUVIJ/K6CYW4ZSO2LJE4GQSX5LXSHNP2RCBS3K.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/3EYR5VZG7BOTQNLB34TX4FUZFGX2YCCM/SFOY6ZPN4VTCDQSAJXRUH6WO332MUVIJ/K6CYW4ZSO2LJE4GQSX5LXSHNP2RCBS3K.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('//cdn.fontshare.com/wf/Z5KCEKMKCYG2OFAP5OBR4DMMOYKQBRXQ/NFSR6S2MRU5B3J5SXWNYS2EENMBHMQXY/65ZDTMKIAVM2PL6JQQLSB6Y2ZDSVPZ52.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/Z5KCEKMKCYG2OFAP5OBR4DMMOYKQBRXQ/NFSR6S2MRU5B3J5SXWNYS2EENMBHMQXY/65ZDTMKIAVM2PL6JQQLSB6Y2ZDSVPZ52.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/Z5KCEKMKCYG2OFAP5OBR4DMMOYKQBRXQ/NFSR6S2MRU5B3J5SXWNYS2EENMBHMQXY/65ZDTMKIAVM2PL6JQQLSB6Y2ZDSVPZ52.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('//cdn.fontshare.com/wf/VFK4WJ2ASLGVJIGPTOYHEAIT3DW643RW/6EOQ664MDO34ATBE2MF2I4O67G7EU7JM/5CZKGRVOJ2H4RNXBVGN3P4FD5ZWCYM54.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/VFK4WJ2ASLGVJIGPTOYHEAIT3DW643RW/6EOQ664MDO34ATBE2MF2I4O67G7EU7JM/5CZKGRVOJ2H4RNXBVGN3P4FD5ZWCYM54.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/VFK4WJ2ASLGVJIGPTOYHEAIT3DW643RW/6EOQ664MDO34ATBE2MF2I4O67G7EU7JM/5CZKGRVOJ2H4RNXBVGN3P4FD5ZWCYM54.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('//cdn.fontshare.com/wf/47WQXPVBB5FZSBSKG7EM3GTGOVFM5BBT/ODED7M7ROA7KYKTD3MYSN4KKO6JVXBQE/EE3DYKUPHF3W5SWXFO53CRP5KMNTTNTH.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/47WQXPVBB5FZSBSKG7EM3GTGOVFM5BBT/ODED7M7ROA7KYKTD3MYSN4KKO6JVXBQE/EE3DYKUPHF3W5SWXFO53CRP5KMNTTNTH.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/47WQXPVBB5FZSBSKG7EM3GTGOVFM5BBT/ODED7M7ROA7KYKTD3MYSN4KKO6JVXBQE/EE3DYKUPHF3W5SWXFO53CRP5KMNTTNTH.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('//cdn.fontshare.com/wf/BBOB5VAX4DF6FK5U27HLFW2VBLISCNKC/MIAKLBXTHJJTUKTXLTZZ76B3RNR3JBSO/BYZ4XKAY33UX3C5BSZV4BEIU2HQF4PD7.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/BBOB5VAX4DF6FK5U27HLFW2VBLISCNKC/MIAKLBXTHJJTUKTXLTZZ76B3RNR3JBSO/BYZ4XKAY33UX3C5BSZV4BEIU2HQF4PD7.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/BBOB5VAX4DF6FK5U27HLFW2VBLISCNKC/MIAKLBXTHJJTUKTXLTZZ76B3RNR3JBSO/BYZ4XKAY33UX3C5BSZV4BEIU2HQF4PD7.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('//cdn.fontshare.com/wf/NATVPFYC4NJ2MZVSHF5VZYFWGTTPQUYX/MRQWDISFO5EKUB3Q72S4DXWYEOXNEN2I/2DYLXJJ5VPGFHZKCL4LCW4EGVHYDFG4L.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/NATVPFYC4NJ2MZVSHF5VZYFWGTTPQUYX/MRQWDISFO5EKUB3Q72S4DXWYEOXNEN2I/2DYLXJJ5VPGFHZKCL4LCW4EGVHYDFG4L.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/NATVPFYC4NJ2MZVSHF5VZYFWGTTPQUYX/MRQWDISFO5EKUB3Q72S4DXWYEOXNEN2I/2DYLXJJ5VPGFHZKCL4LCW4EGVHYDFG4L.ttf') format('truetype');
+  font-weight: 200 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+

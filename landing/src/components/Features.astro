@@ -1,0 +1,105 @@
+---
+import { Search, Sparkles, Layout, Palette, Terminal, ShieldCheck } from 'lucide-astro';
+
+const features = [
+	{
+		title: 'Smart Analysis',
+		description: 'Automatically detects 40+ frameworks, databases, and tools.',
+		number: '01',
+		inverted: false
+	},
+	{
+		title: 'AI Generation',
+		description: 'Powered by Gemini 2.0 Flash for technical documentation.',
+		number: '02',
+		inverted: true
+	},
+	{
+		title: 'Customizable',
+		description: 'Pick and choose exactly which sections to include.',
+		number: '03',
+		inverted: false
+	},
+	{
+		title: 'Natural Tones',
+		description: 'Choose between Professional, Friendly, or Minimal tones.',
+		number: '04',
+		inverted: false
+	},
+	{
+		title: 'Zero Config',
+		description: 'Built as a CLI that works everywhere out of the box.',
+		number: '05',
+		inverted: true
+	},
+	{
+		title: 'Local First',
+		description: 'Your API key is stored locally and securely in .env.',
+		number: '06',
+		inverted: false
+	}
+];
+---
+
+<section class="feature-cards-module__ckiSfG__features" id="features">
+	<div class="dr-layout-grid">
+		<div class="feature-cards-module__ckiSfG__title reveal">
+			<h2 class="p-s" style="font-family: var(--font-panchang); font-weight: 800; font-size: 2vw; text-transform: uppercase;">
+				Why Readmefy?
+			</h2>
+		</div>
+		
+		<div class="features-grid-container">
+			{features.map((f) => (
+				<div class={`card-module__M36EKa__wrapper ${f.inverted ? 'card-module__M36EKa__inverted' : ''} reveal`}>
+					<span class="card-module__M36EKa__number">{f.number}</span>
+					<div class="card-module__M36EKa__content">
+						<h3 class="card-module__M36EKa__text">{f.title}</h3>
+						<p style="font-family: var(--font-roboto); font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">{f.description}</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.feature-cards-module__ckiSfG__features {
+		padding: 10rem 0;
+		background: var(--theme-primary);
+	}
+
+	.feature-cards-module__ckiSfG__title {
+		grid-column: 1 / -1;
+		margin-bottom: 5rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		padding-bottom: 2rem;
+	}
+
+	.features-grid-container {
+		grid-column: 1 / -1;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--gap);
+	}
+
+	@media (max-width: 800px) {
+		.features-grid-container {
+			grid-template-columns: 1fr;
+		}
+		
+		.feature-cards-module__ckiSfG__features {
+			padding: 5rem 0;
+		}
+	}
+
+	/* Card Specific Styles to ensure consistency if CSS not fully loaded */
+	.card-module__M36EKa__wrapper {
+		transition: transform 0.6s var(--ease), opacity 0.6s var(--ease);
+	}
+
+	.card-module__M36EKa__wrapper:hover {
+		transform: translateY(-10px);
+	}
+</style>
+

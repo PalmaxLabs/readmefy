@@ -1,0 +1,189 @@
+---
+import { Github, Play, ArrowRight } from 'lucide-astro';
+---
+
+<section class="home-module__Zqh6fG__hero dr-layout-grid-inner">
+	<div class="home-module__Zqh6fG__title-wrapper">
+		<h1 class="home-module__Zqh6fG__title appear-title-module__UCYHHq__title">
+			<span class="appear-title-module__UCYHHq__line">
+				<span style="--i:0">READMEFY</span>
+			</span>
+		</h1>
+		<div class="home-module__Zqh6fG__subtitle-wrapper">
+			<p class="home-module__Zqh6fG__subtitle p-s">
+				AI-POWERED README GENERATOR <br />
+				FOR DEVELOPERS WHO CARE <br />
+				ABOUT DOCUMENTATION.
+			</p>
+		</div>
+	</div>
+
+	<div class="home-module__Zqh6fG__buttons">
+		<a href="https://github.com/kevin/readmefy" class="button-module__h0EWEW__button">
+			<span class="button-module__h0EWEW__icon" style="background-color: var(--color-pink);">
+				<Github size={24} color="black" />
+			</span>
+			<span class="button-module__h0EWEW__text">
+				<span class="button-module__h0EWEW__visible">STAR ON GITHUB</span>
+				<span class="button-module__h0EWEW__hidden">GET STARTED <ArrowRight size={16} class="button-module__h0EWEW__arrow" /></span>
+			</span>
+		</a>
+		
+		<a href="#features" class="button-module__h0EWEW__button">
+			<span class="button-module__h0EWEW__icon" style="background-color: var(--color-white);">
+				<Play size={24} color="black" fill="black" />
+			</span>
+			<span class="button-module__h0EWEW__text">
+				<span class="button-module__h0EWEW__visible">VIEW FEATURES</span>
+				<span class="button-module__h0EWEW__hidden">LEARN MORE <ArrowRight size={16} class="button-module__h0EWEW__arrow" /></span>
+			</span>
+		</a>
+	</div>
+
+	<div class="terminal-container reveal">
+		<div class="terminal-mockup">
+			<div class="terminal-header">
+				<div class="terminal-dots">
+					<span class="dot red"></span>
+					<span class="dot yellow"></span>
+					<span class="dot green"></span>
+				</div>
+				<div class="terminal-title">readmefy --terminal</div>
+			</div>
+			<div class="terminal-body">
+				<div class="terminal-line"><span class="terminal-prompt">$</span> npx readmefy</div>
+				<div class="terminal-line terminal-status">⠋ Analyzing project structure...</div>
+				<div class="terminal-line terminal-success">✔ Analysis complete</div>
+				<div class="terminal-line">   ✔ Detected:  <span class="terminal-highlight">Node.js + Astro</span></div>
+				<div class="terminal-line">   ✔ README:    <span class="terminal-error">Not found</span></div>
+				<div class="terminal-line terminal-divider">────────────────────────────────────────────</div>
+				<div class="terminal-line terminal-interactive">? Which sections should be included?</div>
+				<div class="terminal-line terminal-choice">◉ Features  ◉ Installation  ◉ Usage  ◉ Contributing</div>
+				<div class="terminal-line terminal-status">⠋ Generating README... <span class="terminal-count">2942 chars</span></div>
+				<div class="terminal-line terminal-success">✔ README.md created successfully!</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.home-module__Zqh6fG__hero {
+		padding-top: 20vh;
+		min-height: 120vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.home-module__Zqh6fG__title-wrapper {
+		text-align: center;
+		margin-bottom: 5vh;
+	}
+
+	.home-module__Zqh6fG__title {
+		font-family: var(--font-panchang);
+		font-size: 15.5vw;
+		line-height: .8;
+		font-weight: 800;
+		color: var(--color-white);
+		letter-spacing: -0.05em;
+		margin-bottom: 2rem;
+	}
+
+	.home-module__Zqh6fG__subtitle-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	.home-module__Zqh6fG__subtitle {
+		font-family: var(--font-roboto);
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+		line-height: 1.2;
+		font-size: 1.25rem;
+		opacity: 0.8;
+	}
+
+	.home-module__Zqh6fG__buttons {
+		display: flex;
+		gap: 1.5rem;
+		margin-bottom: 10vh;
+	}
+
+	@media (max-width: 800px) {
+		.home-module__Zqh6fG__buttons {
+			flex-direction: column;
+			width: 100%;
+			padding: 0 var(--safe);
+		}
+		
+		.home-module__Zqh6fG__title {
+			font-size: 18vw;
+		}
+	}
+
+	.terminal-container {
+		width: 100%;
+		max-width: 900px;
+		margin: 0 auto;
+		transform: perspective(1000px) rotateX(5deg);
+		transition: transform 0.8s var(--ease);
+	}
+
+	.terminal-container:hover {
+		transform: perspective(1000px) rotateX(0deg);
+	}
+
+	/* Terminal Styles refined for high-fidelity */
+	.terminal-mockup {
+		background: #0d0d0f;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+		overflow: hidden;
+		font-family: 'JetBrains Mono', monospace;
+	}
+
+	.terminal-header {
+		background: #1a1a1d;
+		padding: 0.75rem 1rem;
+		display: flex;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.terminal-dots { display: flex; gap: 0.5rem; }
+	.dot { width: 10px; height: 10px; border-radius: 50%; }
+	.dot.red { background: #ff5f56; }
+	.dot.yellow { background: #ffbd2e; }
+	.dot.green { background: #27c93f; }
+
+	.terminal-title {
+		color: #555;
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	.terminal-body {
+		padding: 2rem;
+		font-size: 14px;
+		line-height: 1.6;
+		color: #ddd;
+	}
+
+	.terminal-prompt { color: var(--color-pink); font-weight: bold; }
+	.terminal-status { color: #888; }
+	.terminal-success { color: #27c93f; }
+	.terminal-highlight { color: var(--color-cyan); font-weight: bold; }
+	.terminal-divider { color: #333; margin: 1rem 0; }
+	.terminal-interactive { color: #facc15; }
+	.terminal-choice { color: #fff; background: rgba(255, 255, 255, 0.05); padding: 0.2rem 0.5rem; border-radius: 4px; }
+	.terminal-count { color: #00e0ff; }
+	.terminal-error { color: #ef4444; }
+</style>
+

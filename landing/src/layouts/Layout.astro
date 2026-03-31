@@ -1,0 +1,134 @@
+---
+import '../styles/fonts.css';
+import '../styles/lenis.css';
+import '../styles/utils.css';
+import '../styles/cursor.css';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Readmefy - AI-powered CLI tool that automatically analyzes your project and generates a professional README.md in seconds." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="anton_a8b17dcd-module__Xi7J6a__variable roboto_2384e6da-module__e7HsQW__variable">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+		<!-- Fontshare Panchang -->
+		<link href="https://api.fontshare.com/v2/css?f[]=panchang@200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		
+		<style is:global>
+			:root {
+				--color-black: #000;
+				--color-white: #fff;
+				--color-pink: #ff00d0;
+				--color-cyan: #00e0ff;
+				--color-purple: #7000ff;
+				--color-pink-transparent: rgba(255, 0, 208, 0);
+				
+				--theme-primary: var(--color-black);
+				--theme-secondary: var(--color-white);
+				--theme-contrast: var(--color-pink);
+				
+				--font-roboto: 'Roboto', sans-serif;
+				--font-panchang: 'Panchang', sans-serif;
+				--font-anton: 'Anton', sans-serif;
+				
+				--safe: 2.77778vw;
+				--columns: 12;
+				--gap: 1.66667vw;
+				--device-width: 1440;
+				--device-height: 900;
+				
+				--layout-width: calc(100vw - (2 * var(--safe)));
+				--column-width: calc((var(--layout-width) - ((var(--columns) - 1) * var(--gap))) / var(--columns));
+				
+				--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+				--ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+				--ease: var(--ease-out-expo);
+			}
+
+			@media (max-width: 800px) {
+				:root {
+					--safe: 5.33333vw;
+					--columns: 4;
+					--gap: 3.2vw;
+					--device-width: 375;
+					--device-height: 667;
+				}
+			}
+
+			html {
+				background: var(--theme-primary);
+				color: var(--theme-secondary);
+				font-family: var(--font-roboto);
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			
+			.dr-layout-grid {
+				display: grid;
+				grid-template-columns: repeat(var(--columns), 1fr);
+				gap: var(--gap);
+				padding: 0 var(--safe);
+			}
+		</style>
+	</head>
+	<body data-theme="dark" class="theme-dark">
+		<slot />
+		
+		<script>
+			import Lenis from 'lenis';
+
+			// Initialize Lenis
+			const lenis = new Lenis({
+				duration: 1.2,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+				smoothWheel: true,
+			});
+
+			function raf(time: number) {
+				lenis.raf(time);
+				requestAnimationFrame(raf);
+			}
+
+			requestAnimationFrame(raf);
+
+			// Animation Reveal Logic
+			const observerOptions = {
+				threshold: 0.1,
+				rootMargin: '0px 0px -50px 0px'
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+						entry.target.classList.add('appear-title-module__UCYHHq__visible');
+					}
+				});
+			}, observerOptions);
+
+			document.querySelectorAll('.reveal, .appear-title-module__UCYHHq__title').forEach((el) => observer.observe(el));
+		</script>
+	</body>
+</html>
+
+

@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Footer from '../components/Footer.astro';
+import { ArrowUpRight } from 'lucide-astro';
+---
+
+<Layout title="Readmefy | AI-Powered README Generator">
+	<div class="showcase-module__CmneiG__canvas"></div>
+	
+	<main class="main-content">
+		<Hero />
+		<Features />
+		
+		<section class="cta-section dr-layout-grid reveal">
+			<div class="cta-wrapper">
+				<h2 class="p-s" style="font-family: var(--font-panchang); font-size: 5vw; line-height: 1; font-weight: 800; text-transform: uppercase; margin-bottom: 2rem;">
+					READY TO <br /> DOCUMENT?
+				</h2>
+				<p class="p-s" style="font-size: 1.25rem; opacity: 0.6; margin-bottom: 4rem; max-width: 500px;">
+					Stop wasting hours on boilerplate documentation. Let AI analyze your code and generate a high-quality README in seconds.
+				</p>
+				
+				<div class="cta-buttons">
+					<a href="#" class="button-module__h0EWEW__button" style="width: fit-content; min-width: 250px;">
+						<span class="button-module__h0EWEW__icon" style="background-color: var(--color-pink);">
+							<ArrowUpRight size={24} color="black" />
+						</span>
+						<span class="button-module__h0EWEW__text">
+							<span class="button-module__h0EWEW__visible">START NOW</span>
+							<span class="button-module__h0EWEW__hidden">npx readmefy <ArrowUpRight size={16} class="button-module__h0EWEW__arrow" /></span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
+</Layout>
+
+<style>
+	.main-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.showcase-module__CmneiG__canvas {
+		background-color: var(--theme-primary);
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	.showcase-module__CmneiG__canvas:after {
+		content: "";
+		background: radial-gradient(var(--color-pink), var(--color-pink-transparent) 70%);
+		opacity: 0.2;
+		width: 150vw;
+		height: 100vw;
+		position: absolute;
+		top: -20vh;
+		left: 50%;
+		transform: translate(-50%);
+		filter: blur(100px);
+	}
+
+	.cta-section {
+		padding: 15rem 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.cta-wrapper {
+		grid-column: 1 / -1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.cta-buttons {
+		display: flex;
+		justify-content: center;
+	}
+
+	@media (max-width: 800px) {
+		.cta-section {
+			padding: 8rem 0;
+		}
+		
+		.cta-wrapper h2 {
+			font-size: 10vw !important;
+		}
+	}
+</style>
+
