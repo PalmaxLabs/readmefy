@@ -14,8 +14,8 @@ const READMEFY_ENDPOINT = 'https://readmefy.xyz/api/generate';
 const OPENROUTER_ENDPOINT = 'https://openrouter.ai/api/v1/chat/completions';
 
 const MODELS = {
-  primary: 'mistralai/mistral-7b-instruct',
-  fallback: 'openchat/openchat-7b',
+  primary: 'google/gemini-2.0-flash-001',
+  fallback: 'meta-llama/llama-3.1-8b-instruct',
 };
 
 const DEFAULT_TIMEOUT_MS = 60_000; // 60 seconds
