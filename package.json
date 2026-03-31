@@ -1,0 +1,54 @@
+{
+  "name": "readmefy",
+  "version": "1.0.0",
+  "description": "AI-powered CLI tool that automatically analyzes your project and generates a high-quality README.md",
+  "type": "module",
+  "main": "cli/index.js",
+  "bin": {
+    "readmefy": "./cli/index.js"
+  },
+  "files": [
+    "cli/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node cli/index.js",
+    "dev": "node cli/index.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "lint": "eslint cli/"
+  },
+  "keywords": [
+    "readme",
+    "ai",
+    "cli",
+    "generator",
+    "openrouter",
+    "developer-tools",
+    "automation",
+    "documentation",
+    "markdown"
+  ],
+  "author": "Readmefy Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/readmefy.git"
+  },
+  "homepage": "https://github.com/yourusername/readmefy#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/readmefy/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1",
+    "commander": "^12.1.0",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {}
+}
